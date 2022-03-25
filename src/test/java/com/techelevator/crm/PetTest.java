@@ -27,23 +27,15 @@ Pet pet = new Pet();
 
     public void testPrintTheList(){
         //Arrange
-        String vax1 = "Rabies";
-        String vax2 = "Distemper";
-        String vax3 = "Parvo";
-        pet.getVaccinations().add(vax1);
-        pet.getVaccinations().add(vax2);
-        pet.getVaccinations().add(vax3);
+        pet.getVaccinations().add("Rabies");
+        pet.getVaccinations().add("Distemper");
+        pet.getVaccinations().add("Parvo");
         String expected = "Rabies, Distemper, Parvo";
         //Act
         String actual = pet.listVaccinations();
         //Assert
         Assert.assertEquals(expected,actual);
-
-
     }
-
-
-
 
 
 

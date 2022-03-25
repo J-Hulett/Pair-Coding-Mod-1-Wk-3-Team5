@@ -74,9 +74,12 @@ public class Employee extends Person implements Billable {
         double discountPercentage = 0.5;
         for(Map.Entry<String, Double> service : servicesRendered.entrySet()){
             if(service.getKey().equals("Walking")){
-                total += service.getValue() * discountPercentage;
+                total += (service.getValue() * discountPercentage);
             }
-            total += service.getValue();
+            else{
+                total += service.getValue();
+            }
+
         }
         return total;
     }

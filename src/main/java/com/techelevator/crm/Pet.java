@@ -12,13 +12,10 @@ public class Pet {
     public Pet(String name, String species){
         this.name = name;
         this.species = species;
-
     }
 
     public Pet() {
-
     }
-
 
     public String listVaccinations(){
         String vaccinations = String.join(", ", this.vaccinations);
