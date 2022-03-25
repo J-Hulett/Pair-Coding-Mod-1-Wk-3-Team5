@@ -20,11 +20,9 @@ public class Pet {
     }
 
 
-    public String listVaccinations(List<String> testList){
-
-        String vaccinations = String.join(", ", testList);
+    public String listVaccinations(){
+        String vaccinations = String.join(", ", this.vaccinations);
         return vaccinations;
-
     }
 
 

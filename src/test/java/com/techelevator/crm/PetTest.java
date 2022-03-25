@@ -10,7 +10,7 @@ import java.util.List;
 
 public class PetTest {
 Pet pet = new Pet();
-   List<String> testList  = new ArrayList<String>();
+
     @Before
     public void setUp() throws Exception {
        String message ="Running..";
@@ -26,17 +26,17 @@ Pet pet = new Pet();
     @Test
 
     public void testPrintTheList(){
-
+        //Arrange
         String vax1 = "Rabies";
         String vax2 = "Distemper";
         String vax3 = "Parvo";
-        testList.add(vax1);
-        testList.add(vax2);
-        testList.add(vax3);
+        pet.getVaccinations().add(vax1);
+        pet.getVaccinations().add(vax2);
+        pet.getVaccinations().add(vax3);
         String expected = "Rabies, Distemper, Parvo";
-        String actual = pet.listVaccinations(testList);
-
-
+        //Act
+        String actual = pet.listVaccinations();
+        //Assert
         Assert.assertEquals(expected,actual);
 
 
